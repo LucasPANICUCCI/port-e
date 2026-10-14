@@ -1,0 +1,703 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="description" content="La Portée — un outil Révéla, par DSP Avocats. Comprendre une décision de justice : ce qu’elle décide, si elle s’applique déjà, comment la contester et jusqu’à quand." />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#F7F3EA" />
+<title>La Portée — comprendre une décision de justice · un outil Révéla</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Cpolyline points='13.00,13.00%2013.01,12.93%2013.04,12.86%2013.09,12.80%2013.15,12.76%2013.23,12.73%2013.32,12.71%2013.42,12.72%2013.52,12.76%2013.62,12.81%2013.71,12.89%2013.79,12.99%2013.86,13.11%2013.90,13.25%2013.92,13.40%2013.92,13.56%2013.89,13.73%2013.82,13.90%2013.73,14.07%2013.60,14.23%2013.44,14.37%2013.26,14.49%2013.05,14.58%2012.82,14.64%2012.57,14.67%2012.31,14.66%2012.05,14.61%2011.79,14.51%2011.53,14.38%2011.29,14.20%2011.08,13.98%2010.89,13.72%2010.74,13.43%2010.63,13.11%2010.57,12.77%2010.55,12.41%2010.59,12.05%2010.69,11.68%2010.84,11.33%2011.05,10.99%2011.31,10.67%2011.62,10.40%2011.98,10.16%2012.37,9.97%2012.80,9.84%2013.25,9.78%2013.72,9.77%2014.19,9.84%2014.66,9.98%2015.11,10.18%2015.54,10.46%2015.93,10.80%2016.28,11.20%2016.56,11.65%2016.79,12.15%2016.94,12.69%2017.02,13.25%2017.01,13.83%2016.92,14.41%2016.75,14.98%2016.49,15.53%2016.15,16.05%2015.73,16.52%2015.24,16.93%2014.69,17.28%2014.09,17.54%2013.45,17.72%2012.77,17.81%2012.08,17.80%2011.39,17.69%2010.72,17.48%2010.07,17.18%209.46,16.77%208.91,16.28%208.42,15.71%208.02,15.06%207.71,14.36%207.50,13.61%207.40,12.82%207.41,12.02%207.53,11.22%207.77,10.44%208.13,9.69%208.59,8.99%209.15,8.35%209.81,7.79%2010.55,7.33%2011.35,6.97%2012.21,6.72%2013.10,6.60%2014.01,6.61%2014.92,6.75%2015.82,7.02%2016.67,7.41%2017.47,7.93%2018.19,8.57%2018.83,9.30%2019.35,10.13%2019.76,11.03%2020.04,12.00%2020.19,13.00%2020.19,14.02%2020.04,15.05%2019.75,16.05%2019.31,17.01%2018.74,17.90%2018.04,18.71%2017.22,19.43%2016.31,20.02%2015.30,20.49%2014.24,20.81%2013.13,20.98%2011.99,20.99%2010.86,20.83%209.75,20.52%208.68,20.05%207.69,19.42%206.78,18.66%205.99,17.77%205.32,16.76%204.80,15.67%204.43,14.50%204.24,13.28%204.21,12.03%204.37,10.78%204.70,9.56%205.20,8.39%205.88,7.29%206.70,6.29%207.67,5.41%208.76,4.67%209.95,4.09%2011.22,3.68%2012.55,3.45%2013.91,3.41%2015.27,3.56%2016.60,3.91%2017.88,4.45%2019.08,5.16%2020.17,6.05%2021.14,7.09%2021.96,8.26%2022.60,9.54%2023.06,10.92%2023.33,12.35%2023.39,13.82%2023.24,15.29%2022.88,16.73%2022.32,18.12%2021.56,19.43%2020.62,20.62%2019.52,21.68%2018.26,22.57%2016.89,23.29%2015.41,23.80%2013.87,24.11%2012.30,24.19%2010.71,24.05%209.15,23.68%207.65,23.10%206.24,22.30' fill='none' stroke='%23B9924C' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+<style>
+:root { --paper:#F7F3EA; --sheet:#FBF8F1; --navy:#1B2A4A; --ink:#22283A; --gold:#B9924C; --gold-soft:#D8BC85; --line:#E3DACA; --muted:#6E6A5E;
+  --ok:#7FA36C; --mid:#C99A45; --hot:#C2584C;
+  --serif:"Cormorant Garamond", Garamond, "Times New Roman", serif; --sans:"DM Sans","Helvetica Neue",Arial,sans-serif;
+  color-scheme: light; }
+*,*::before,*::after { box-sizing:border-box; }
+html { -webkit-text-size-adjust:100%; }
+body { margin:0; background:var(--paper); color:var(--ink); font-family:var(--sans); font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px); }
+a { color:inherit; }
+button, input, select { font:inherit; color:inherit; }
+button { cursor:pointer; }
+[hidden] { display:none !important; }
+:focus-visible { outline:2px solid var(--gold); outline-offset:3px; }
+.app { max-width:680px; margin:0 auto; padding:0 20px; min-height:100vh; display:flex; flex-direction:column; }
+header.top { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:18px 0; border-bottom:1px solid var(--line); }
+.brand { display:inline-flex; align-items:center; gap:9px; color:var(--navy); text-decoration:none; }
+.brand svg { color:var(--gold); flex:none; }
+.brand span { font-family:var(--serif); font-size:22px; font-weight:600; letter-spacing:.08em; }
+nav.tabs { display:flex; gap:4px; }
+nav.tabs button { border:none; background:none; font-size:13.5px; color:var(--muted); padding:6px 8px; border-radius:8px; }
+nav.tabs button[aria-current="true"] { color:var(--navy); background:rgba(27,42,74,.07); font-weight:600; }
+main { flex:1; padding:28px 0 12px; }
+.screen { display:none; }
+.screen.on { display:block; animation:in .35s ease both; }
+@keyframes in { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+@media (prefers-reduced-motion: reduce) { .screen.on { animation:none; } }
+.kicker { font-size:12.5px; font-weight:600; color:var(--gold); letter-spacing:.06em; text-transform:uppercase; margin:0 0 10px; }
+h1 { font-family:var(--serif); font-weight:500; color:var(--navy); font-size:clamp(40px,9vw,58px); line-height:1.02; margin:0 0 18px; letter-spacing:-.01em; }
+h1 em { font-style:italic; font-weight:400; color:var(--gold); }
+h2 { font-family:var(--serif); font-weight:600; color:var(--navy); font-size:clamp(27px,6vw,34px); line-height:1.12; margin:0 0 10px; }
+h3 { font-family:var(--serif); font-weight:600; color:var(--navy); font-size:22px; line-height:1.2; margin:0 0 6px; }
+.lede { font-family:var(--serif); font-size:clamp(20px,4.6vw,23px); line-height:1.45; margin:0 0 22px; }
+.muted { color:var(--muted); }
+.small { font-size:14px; }
+p { margin:0 0 14px; }
+.btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; border:1px solid var(--navy); background:transparent; border-radius:999px; padding:13px 24px; font-size:15.5px; font-weight:500; text-decoration:none; color:var(--navy); min-height:48px; }
+.btn.main { background:var(--navy); color:var(--sheet); }
+.btn.main:hover { background:#2A3D63; }
+.btn.main:disabled { background:#A7ADBA; border-color:#A7ADBA; cursor:not-allowed; }
+.btn.ghost:hover { background:rgba(27,42,74,.06); }
+.btn.sm { padding:8px 14px; min-height:36px; font-size:14px; }
+.btn.link { border:none; padding:8px 0; min-height:0; color:var(--muted); text-decoration:underline; text-underline-offset:3px; background:none; }
+.row { display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
+.panel { background:var(--sheet); border:1px solid var(--line); border-radius:16px; padding:20px; margin:0 0 16px; }
+.duo { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:22px 0 24px; }
+@media (max-width:560px) { .duo { grid-template-columns:1fr; } }
+.duo .panel { margin:0; }
+.duo h3 { font-size:20px; }
+.duo p { font-size:15px; margin:0; }
+.tag { display:inline-block; font-size:12.5px; font-weight:600; border-radius:999px; padding:3px 11px; color:#fff; background:var(--c,var(--navy)); }
+.tag.legal { --c:var(--navy); } .tag.lettre { --c:var(--gold); }
+
+/* Choix */
+.choices { display:grid; gap:10px; margin:0 0 20px; }
+.choice { display:block; width:100%; text-align:left; border:1px solid var(--line); background:var(--sheet); border-radius:14px; padding:16px 18px; min-height:58px; }
+.choice:hover { border-color:var(--gold); }
+.choice strong { display:block; font-weight:600; font-size:16.5px; color:var(--navy); }
+.choice span { display:block; font-size:14px; color:var(--muted); margin-top:2px; }
+.step-q { font-family:var(--serif); font-size:clamp(25px,5.8vw,31px); line-height:1.2; color:var(--navy); margin:0 0 18px; }
+
+/* Formulaire */
+label.f { display:block; margin:0 0 16px; }
+label.f > span { display:block; font-size:14.5px; font-weight:500; color:var(--navy); margin-bottom:5px; }
+label.f small { display:block; font-size:13px; color:var(--muted); margin-top:4px; }
+input[type=text], input[type=date], input[type=number], select { width:100%; border:1px solid var(--line); background:#fff; border-radius:10px; padding:11px 12px; font-size:16px; }
+input:focus, select:focus { outline:2px solid var(--gold-soft); border-color:var(--gold); }
+.dur { display:grid; grid-template-columns:110px 1fr; gap:10px; }
+.check { display:flex; gap:10px; align-items:flex-start; font-size:15px; margin:0 0 14px; cursor:pointer; }
+.check input { width:20px; height:20px; margin-top:2px; accent-color:var(--navy); flex:none; }
+.note { border-left:3px solid var(--gold); padding:4px 0 4px 14px; margin:0 0 18px; font-size:15px; }
+.note.hot { border-color:var(--hot); }
+
+/* Résultat du calcul */
+.result { border-radius:18px; padding:22px; margin:6px 0 18px; background:var(--navy); color:#F7F3EA; }
+.result .kicker { color:var(--gold-soft); margin-bottom:4px; }
+.result .big { font-family:var(--serif); font-size:clamp(30px,7vw,40px); line-height:1.1; font-weight:600; margin:0 0 6px; }
+.result .left { font-size:15px; color:#D3D7E0; margin:0; }
+.result .left strong { color:#fff; }
+.result.past { background:#6A2018; }
+.steps { list-style:none; padding:0; margin:0; counter-reset:s; }
+.steps li { counter-increment:s; position:relative; padding:0 0 12px 34px; font-size:15px; }
+.steps li::before { content:counter(s); position:absolute; left:0; top:0; width:24px; height:24px; border-radius:50%; border:1.5px solid var(--gold); color:var(--gold); font-size:13px; font-weight:600; display:flex; align-items:center; justify-content:center; }
+.steps li a { font-size:13px; color:var(--navy); }
+.safety { background:#FFF7E6; border:1px solid var(--gold-soft); border-radius:14px; padding:14px 16px; font-size:15px; margin:0 0 18px; }
+
+/* Relevé */
+.item { display:grid; grid-template-columns:auto 1fr; gap:4px 16px; align-items:start; background:#fff; border:1px solid var(--line); border-radius:16px; padding:16px 18px; margin:0 0 12px; }
+.item .cd { grid-row:span 3; text-align:center; min-width:74px; border-radius:12px; padding:8px 6px; background:var(--c); color:#fff; }
+.item .cd strong { display:block; font-family:var(--serif); font-size:30px; line-height:1; }
+.item .cd span { font-size:11.5px; }
+.item h3 { font-size:20px; margin:0; }
+.item .when { font-size:14.5px; margin:0; }
+.item .acts { display:flex; gap:12px; flex-wrap:wrap; }
+.empty { text-align:center; color:var(--muted); padding:30px 10px; }
+
+/* Repères */
+table.ref { width:100%; border-collapse:collapse; font-size:15px; margin:0 0 6px; }
+table.ref th { text-align:left; font-size:12.5px; color:var(--muted); font-weight:600; border-bottom:1px solid var(--line); padding:8px 8px 8px 0; }
+table.ref td { border-bottom:1px solid var(--line); padding:10px 8px 10px 0; vertical-align:top; }
+table.ref td.d { font-weight:600; color:var(--navy); white-space:nowrap; }
+table.ref a { font-size:13px; color:var(--navy); }
+@media (max-width:520px) { table.ref, table.ref tbody, table.ref tr, table.ref td { display:block; } table.ref thead { display:none; } table.ref tr { border-bottom:1px solid var(--line); padding:10px 0; } table.ref td { border:none; padding:2px 0; } }
+
+.cta { background:var(--navy); color:#F7F3EA; border-radius:18px; padding:24px 22px; margin:26px 0 16px; }
+.cta h3 { color:#F7F3EA; }
+.cta p { color:#D3D7E0; font-size:15px; }
+.cta .btn { background:var(--gold); border-color:var(--gold); color:var(--navy); font-weight:600; }
+.warn { font-size:13.5px; color:var(--muted); border-top:1px solid var(--line); padding-top:14px; margin-top:20px; }
+.next-links a { font-weight:600; color:var(--navy); }
+footer.foot { border-top:1px solid var(--line); padding:22px 0 34px; font-size:13.5px; color:var(--muted); }
+footer.foot .sig { font-family:var(--serif); font-style:italic; font-size:19px; color:var(--navy); margin:0 0 8px; }
+footer.foot p { margin:0 0 6px; }
+details.mentions { margin-top:10px; }
+details.mentions summary { cursor:pointer; color:var(--navy); font-weight:500; }
+details.mentions h4 { font-family:var(--serif); font-size:18px; color:var(--navy); margin:16px 0 4px; }
+details.mentions p { font-size:13.5px; }
+.print-only { display:none; }
+@media print {
+  @page { margin:16mm 14mm; }
+  body { background:#fff; font-size:11.5pt; }
+  .no-print, header.top, details.mentions, .item .acts { display:none !important; }
+  .print-only { display:block; }
+  .app { max-width:none; padding:0; }
+  .screen { display:none !important; }
+  .screen.on { display:block !important; animation:none; }
+  .item, .panel { break-inside:avoid; }
+  .item .cd, .result { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+}
+.skip{position:absolute;left:-9999px;top:8px;z-index:30;background:var(--navy);color:#fff;padding:8px 16px;border-radius:999px;font-size:14px;text-decoration:none}.skip:focus{left:12px}
+
+/* Spécifique à La Portée */
+.four { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:8px; margin:22px 0 24px; }
+@media (max-width:560px) { .four { grid-template-columns:1fr 1fr; } }
+.four div { background:var(--sheet); border:1px solid var(--line); border-radius:14px; padding:12px; }
+.four strong { display:block; font-family:var(--serif); font-size:20px; color:var(--navy); line-height:1.15; }
+.four span { font-size:13px; color:var(--muted); }
+.progress { display:flex; align-items:center; gap:12px; margin-bottom:18px; }
+.bar { flex:1; height:4px; background:var(--line); border-radius:4px; overflow:hidden; }
+.bar i { display:block; height:100%; background:var(--gold); transition:width .3s; }
+.count { font-size:13.5px; color:var(--muted); white-space:nowrap; }
+.grid2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+@media (max-width:520px) { .grid2 { grid-template-columns:1fr; } }
+textarea { width:100%; border:1px solid var(--line); background:#fff; border-radius:10px; padding:11px 12px; font-size:16px; min-height:84px; resize:vertical; font-family:inherit; line-height:1.55; }
+textarea:focus { outline:2px solid var(--gold-soft); border-color:var(--gold); }
+textarea.disp { min-height:220px; font-size:15px; }
+.chips { display:flex; flex-wrap:wrap; gap:6px; }
+.chip { border:1px solid var(--line); background:var(--sheet); border-radius:999px; padding:8px 14px; font-size:14.5px; min-height:40px; text-align:left; }
+.chip[aria-pressed="true"] { background:var(--navy); border-color:var(--navy); color:var(--sheet); }
+.chip small { display:block; font-size:12px; opacity:.75; }
+.hint { font-size:13.5px; color:var(--muted); margin:-4px 0 14px; }
+.found { background:#F2F7EF; border:1px dashed #A9C59B; border-radius:12px; padding:10px 14px; font-size:14px; color:#3F6431; margin:0 0 14px; }
+.chef { border:1px solid var(--line); background:#fff; border-radius:12px; padding:12px 14px; margin:0 0 8px; }
+.chef .src { font-size:13px; color:var(--muted); font-style:italic; margin:0 0 6px; }
+.chef .exp { font-size:15px; margin:0; }
+.tag { display:inline-block; font-size:11.5px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; padding:3px 8px; border-radius:6px; margin:0 6px 6px 0; background:var(--cream,#F3EEE2); color:var(--navy); }
+.tag.pay { background:#FBEAE7; color:#6A2018; }
+.tag.get { background:#E6F0E1; color:#2F5422; }
+.tag.no { background:#ECECEC; color:#444; }
+.tag.ep { background:#E7ECF5; color:#22355E; }
+.total { background:var(--sheet); border:1px solid var(--line); border-radius:12px; padding:12px 14px; font-size:15px; margin:10px 0 0; }
+.status { border-radius:14px; padding:14px 16px; margin:0 0 6px; font-size:15px; }
+.status.ok { background:#E6F0E1; border:1px solid #A9C59B; color:#24411A; }
+.status.wait { background:#FFF4DE; border:1px solid #E5C77F; color:#5A4108; }
+.status.alert { background:#FBEAE7; border:1px solid #E7B7AF; color:#6A2018; }
+.status strong { display:block; font-family:var(--serif); font-size:21px; font-weight:600; margin-bottom:2px; }
+.deadline { text-align:center; background:var(--navy); color:#fff; border-radius:16px; padding:18px 14px; margin:10px 0; }
+.deadline .lbl { font-size:12.5px; letter-spacing:.06em; text-transform:uppercase; opacity:.8; }
+.deadline .d { font-family:var(--serif); font-size:28px; line-height:1.2; margin:4px 0; }
+.deadline .left { font-size:14px; opacity:.9; }
+.deadline.over { background:#7A2318; }
+.steps { font-size:14px; margin:8px 0 0; padding-left:18px; }
+.steps li { margin-bottom:4px; }
+.steps a { color:var(--navy); font-size:12.5px; }
+.sheet2 { background:#fff; border:1px solid var(--line); border-radius:8px; padding:22px; margin:0 0 16px; font-size:14.5px; }
+.sheet2 h3 { font-size:24px; margin:0 0 2px; }
+.sheet2 .meta { font-size:12.5px; color:var(--muted); margin:0 0 12px; }
+.sheet2 h4 { font-size:12px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:var(--gold); margin:18px 0 6px; }
+.sheet2 p { margin:0 0 6px; }
+.sheet2 ul, .sheet2 ol { margin:0 0 6px; padding-left:18px; }
+.sheet2 li { margin-bottom:5px; }
+.law { border-top:1px solid var(--line); padding:12px 0; }
+.law:first-child { border-top:none; padding-top:0; }
+.law p { margin:0 0 4px; font-size:15px; }
+.law a { font-size:13.5px; color:var(--navy); }
+.toast { position:fixed; left:50%; bottom:24px; transform:translateX(-50%); background:var(--navy); color:#fff; padding:10px 18px; border-radius:999px; font-size:14px; z-index:9; }
+@media print {
+  .sheet2 { border:none; padding:0; }
+  .status, .deadline, .tag, .chef { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .chef { break-inside:avoid; }
+  footer.foot, .after { display:none !important; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+<div class="app">
+<header class="top">
+  <a class="brand" href="https://dsp-avocats.fr/" aria-label="Révéla, par DSP Avocats"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><polyline points="13.00,13.00 13.01,12.93 13.04,12.86 13.09,12.80 13.15,12.76 13.23,12.73 13.32,12.71 13.42,12.72 13.52,12.76 13.62,12.81 13.71,12.89 13.79,12.99 13.86,13.11 13.90,13.25 13.92,13.40 13.92,13.56 13.89,13.73 13.82,13.90 13.73,14.07 13.60,14.23 13.44,14.37 13.26,14.49 13.05,14.58 12.82,14.64 12.57,14.67 12.31,14.66 12.05,14.61 11.79,14.51 11.53,14.38 11.29,14.20 11.08,13.98 10.89,13.72 10.74,13.43 10.63,13.11 10.57,12.77 10.55,12.41 10.59,12.05 10.69,11.68 10.84,11.33 11.05,10.99 11.31,10.67 11.62,10.40 11.98,10.16 12.37,9.97 12.80,9.84 13.25,9.78 13.72,9.77 14.19,9.84 14.66,9.98 15.11,10.18 15.54,10.46 15.93,10.80 16.28,11.20 16.56,11.65 16.79,12.15 16.94,12.69 17.02,13.25 17.01,13.83 16.92,14.41 16.75,14.98 16.49,15.53 16.15,16.05 15.73,16.52 15.24,16.93 14.69,17.28 14.09,17.54 13.45,17.72 12.77,17.81 12.08,17.80 11.39,17.69 10.72,17.48 10.07,17.18 9.46,16.77 8.91,16.28 8.42,15.71 8.02,15.06 7.71,14.36 7.50,13.61 7.40,12.82 7.41,12.02 7.53,11.22 7.77,10.44 8.13,9.69 8.59,8.99 9.15,8.35 9.81,7.79 10.55,7.33 11.35,6.97 12.21,6.72 13.10,6.60 14.01,6.61 14.92,6.75 15.82,7.02 16.67,7.41 17.47,7.93 18.19,8.57 18.83,9.30 19.35,10.13 19.76,11.03 20.04,12.00 20.19,13.00 20.19,14.02 20.04,15.05 19.75,16.05 19.31,17.01 18.74,17.90 18.04,18.71 17.22,19.43 16.31,20.02 15.30,20.49 14.24,20.81 13.13,20.98 11.99,20.99 10.86,20.83 9.75,20.52 8.68,20.05 7.69,19.42 6.78,18.66 5.99,17.77 5.32,16.76 4.80,15.67 4.43,14.50 4.24,13.28 4.21,12.03 4.37,10.78 4.70,9.56 5.20,8.39 5.88,7.29 6.70,6.29 7.67,5.41 8.76,4.67 9.95,4.09 11.22,3.68 12.55,3.45 13.91,3.41 15.27,3.56 16.60,3.91 17.88,4.45 19.08,5.16 20.17,6.05 21.14,7.09 21.96,8.26 22.60,9.54 23.06,10.92 23.33,12.35 23.39,13.82 23.24,15.29 22.88,16.73 22.32,18.12 21.56,19.43 20.62,20.62 19.52,21.68 18.26,22.57 16.89,23.29 15.41,23.80 13.87,24.11 12.30,24.19 10.71,24.05 9.15,23.68 7.65,23.10 6.24,22.30" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg><span>Révéla</span></a>
+  <span class="small muted">La Portée</span>
+</header>
+
+<main id="main">
+<!-- Accueil -->
+<section class="screen on" id="s-intro" aria-labelledby="t-intro">
+  <p class="kicker">Un outil Révéla · Comprendre</p>
+  <h1 id="t-intro">La Portée<br><em>comprendre une décision de justice</em></h1>
+  <p class="lede">Une décision de justice se lit à l’envers : tout ce qui compte se trouve à la fin, après les mots « Par ces motifs ». Et le temps pour réagir commence souvent à courir le jour où on vous la remet.</p>
+  <p class="muted">La Portée vous aide à lire le dispositif ligne par ligne, puis à répondre à trois questions : la décision s’applique-t-elle déjà ? Peut-on la contester, et comment ? Jusqu’à quelle date ?</p>
+  <div class="four"><div><strong>Ce qu’elle dit</strong><span>le dispositif</span></div><div><strong>Si elle s’impose</strong><span>l’exécution</span></div><div><strong>Le recours</strong><span>appel, opposition, pourvoi</span></div><div><strong>L’échéance</strong><span>la date limite</span></div></div>
+  <div class="row"><button class="btn main" id="btn-start">Lire ma décision</button><button class="btn ghost" id="btn-demo">Voir l’exemple d’Élise</button><button class="btn link" id="btn-last" hidden>Reprendre</button></div>
+  <p class="small muted" style="margin-top:22px">Ce que vous saisissez reste sur cet appareil. La Portée couvre les décisions civiles et commerciales courantes ; les prud’hommes, les affaires familiales, les procédures collectives et la matière gracieuse obéissent à des règles particulières.</p>
+</section>
+
+<!-- E1 la décision -->
+<section class="screen" id="s-e1">
+  <div class="progress"><div class="bar"><i style="width:25%"></i></div><span class="count">Étape 1 sur 4</span></div>
+  <p class="kicker">La décision</p>
+  <h2>Qu’avez-vous reçu ?</h2>
+  <p class="muted">Regardez la première page : le titre indique s’il s’agit d’un jugement, d’une ordonnance ou d’un arrêt, et quel juge l’a rendu.</p>
+  <div class="panel">
+    <label class="f"><span>Type de décision</span><div class="chips" data-k="type">
+      <button class="chip" data-v="jug">Un jugement<small>tribunal judiciaire, de commerce, juge des contentieux de la protection</small></button>
+      <button class="chip" data-v="ref">Une ordonnance de référé<small>une décision rendue en urgence</small></button>
+      <button class="chip" data-v="ip">Une ordonnance d’injonction de payer<small>rendue sans débat, sur la seule demande du créancier</small></button>
+      <button class="chip" data-v="jex">Une décision du juge de l’exécution<small>sur une saisie ou une mesure d’exécution</small></button>
+      <button class="chip" data-v="arr">Un arrêt de cour d’appel</button>
+      <button class="chip" data-v="nsp">Je ne sais pas</button></div></label>
+    <p class="hint" id="type-info"></p>
+    <div class="grid2">
+      <label class="f"><span>Juridiction</span><input type="text" data-f="juridiction" placeholder="Par exemple : tribunal judiciaire de Nice" /></label>
+      <label class="f"><span>Date de la décision</span><input type="date" data-f="date" /></label>
+      <label class="f"><span>Votre nom, tel qu’il figure dans la décision</span><input type="text" data-f="moi" /></label>
+      <label class="f"><span>L’autre partie</span><input type="text" data-f="autre" /></label>
+    </div>
+    <label class="f" style="margin:0"><span>À première lecture, la décision est</span><div class="chips" data-k="sens"><button class="chip" data-v="gagne">plutôt en ma faveur</button><button class="chip" data-v="perd">plutôt contre moi</button><button class="chip" data-v="mixte">partagée</button></div></label>
+  </div>
+  <div class="row"><button class="btn main" data-go="e2">Continuer</button><button class="btn link" data-go="intro">Retour</button></div>
+</section>
+
+<!-- E2 dispositif -->
+<section class="screen" id="s-e2">
+  <div class="progress"><div class="bar"><i style="width:50%"></i></div><span class="count">Étape 2 sur 4</span></div>
+  <p class="kicker">Le dispositif</p>
+  <h2>Ce que le juge a décidé</h2>
+  <p class="muted">Seul le dispositif, la partie finale qui suit « Par ces motifs », a l’autorité de la chose jugée. Les motifs expliquent ; le dispositif décide. Recopiez-le, ou collez-le, tel quel.</p>
+  <div class="panel">
+    <label class="f"><span>Le dispositif</span><textarea class="disp" data-f="disp" placeholder="PAR CES MOTIFS,&#10;Le tribunal, statuant publiquement, par jugement contradictoire et en premier ressort,&#10;CONDAMNE … à payer à … la somme de … ;&#10;DÉBOUTE … ;&#10;…"></textarea><small>Une décision par ligne, ou séparées par des points-virgules, comme dans l’original.</small></label>
+  </div>
+  <div id="chefs" aria-live="polite"></div>
+  <div class="row"><button class="btn main" data-go="e3">Continuer</button><button class="btn link" data-go="e1">Retour</button></div>
+</section>
+
+<!-- E3 mentions -->
+<section class="screen" id="s-e3">
+  <div class="progress"><div class="bar"><i style="width:75%"></i></div><span class="count">Étape 3 sur 4</span></div>
+  <p class="kicker">Les mentions</p>
+  <h2>Deux mots qui changent tout</h2>
+  <div id="m-none" class="panel" hidden><p style="margin:0" id="m-none-txt"></p></div>
+  <div id="m-box">
+    <p class="muted">Ils figurent juste après « Par ces motifs » ou en première page : « statuant… par jugement contradictoire et en premier ressort ».</p>
+    <div class="found" id="m-found" hidden></div>
+    <div class="panel">
+      <label class="f"><span>La décision est rendue</span><div class="chips" data-k="ressort"><button class="chip" data-v="premier">en premier ressort</button><button class="chip" data-v="dernier">en dernier ressort</button><button class="chip" data-v="nsp">je ne trouve pas</button></div></label>
+      <p class="hint">En premier ressort, l’appel est possible. En dernier ressort, il ne l’est pas : c’est en général le cas des demandes jusqu’à 5 000 €.</p>
+      <label class="f" style="margin:0"><span>Elle est qualifiée de</span><div class="chips" data-k="qualif"><button class="chip" data-v="contra">contradictoire</button><button class="chip" data-v="reput">réputée contradictoire</button><button class="chip" data-v="defaut">rendue par défaut</button><button class="chip" data-v="nsp">je ne trouve pas</button></div></label>
+      <p class="hint" style="margin:8px 0 0">« Par défaut » signifie que le défendeur n’a pas comparu et n’a pas été cité en personne : il peut alors demander au même juge de rejuger l’affaire, c’est l’opposition.</p>
+    </div>
+  </div>
+  <div class="row"><button class="btn main" data-go="e4">Continuer</button><button class="btn link" data-go="e2">Retour</button></div>
+</section>
+
+<!-- E4 notification -->
+<section class="screen" id="s-e4">
+  <div class="progress"><div class="bar"><i style="width:100%"></i></div><span class="count">Étape 4 sur 4</span></div>
+  <p class="kicker">La notification</p>
+  <h2>Comment vous a-t-elle été remise ?</h2>
+  <p class="muted">Le délai pour contester ne court pas à partir de la date de la décision, mais à partir de sa notification officielle. Une simple copie ne suffit pas.</p>
+  <div class="panel">
+    <label class="f"><span>Vous l’avez reçue</span><div class="chips" data-k="notif">
+      <button class="chip" data-v="sig">par un commissaire de justice<small>un acte de signification, anciennement « huissier »</small></button>
+      <button class="chip" data-v="greffe">par le greffe<small>en lettre recommandée</small></button>
+      <button class="chip" data-v="copie">en simple copie<small>de mon avocat, de l’autre partie, par courriel</small></button>
+      <button class="chip" data-v="nsp">je ne sais pas</button></div></label>
+    <label class="f" id="w-ndate"><span id="l-ndate">Date de la notification</span><input type="date" data-f="ndate" /><small>Pour un commissaire de justice, la date de l’acte. Pour une lettre recommandée, le jour où vous l’avez reçue.</small></label>
+    <label class="f" id="w-perso" hidden><span>L’acte vous a-t-il été remis en main propre ?</span><div class="chips" data-k="perso"><button class="chip" data-v="oui">oui, à moi-même</button><button class="chip" data-v="non">non : déposé à l’étude, avis de passage, remis à un proche</button></div></label>
+    <label class="f" style="margin:0"><span>Vous demeurez</span><div class="chips" data-k="resid"><button class="chip" data-v="metro">en France métropolitaine</button><button class="chip" data-v="om">outre-mer</button><button class="chip" data-v="etr">à l’étranger</button></div></label>
+  </div>
+  <div class="row"><button class="btn main" id="btn-sheet">Voir ma lecture</button><button class="btn link" data-go="e3">Retour</button></div>
+</section>
+
+<!-- Fiche -->
+<section class="screen" id="s-sheet">
+  <p class="kicker no-print">Ma lecture de la décision</p>
+  <div class="sheet2" id="sheet"></div>
+  <div class="after">
+    <div class="panel"><h3 style="font-size:20px">Ce que disent les textes</h3><div id="law"></div></div>
+    <p class="next-links small" id="links"></p>
+    <div class="cta no-print">
+      <h3>Faire relire la décision</h3>
+      <p>Un délai de recours manqué est en principe définitif, et l’appel exige le plus souvent un avocat. Si une date limite approche, écrivez-nous sans attendre : le bilan amiable gratuit commence par la lecture de votre décision.</p>
+      <a class="btn" href="mailto:contact@dsp-avocats.fr?subject=Bilan%20amiable%20gratuit%20%E2%80%94%20La%20Port%C3%A9e">Demander mon bilan amiable gratuit</a>
+    </div>
+    <div class="row no-print"><button class="btn main" id="btn-print">Imprimer ma lecture</button><button class="btn link" data-go="e1">Modifier</button></div>
+    <p class="warn">La Portée aide à lire une décision et à repérer les délais. Elle ne tient pas compte de toutes les règles particulières (certaines matières, certaines juridictions, les décisions qui ne tranchent qu’une partie du litige) et ne remplace pas l’analyse d’un avocat. La date calculée est indicative : vérifiez-la toujours sur l’acte de notification, qui doit indiquer le délai et la manière d’exercer le recours.</p>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <p class="sig">Le droit existe lorsqu’on le révèle.</p>
+  <p>Révéla, par SELARL DSP Avocats, société d’avocats inscrite au Barreau de Nice. 8 bis rue Andrioli, Le Capitole V, 06000 Nice. <a href="mailto:contact@dsp-avocats.fr">contact@dsp-avocats.fr</a></p>
+  <p class="no-print"><button class="btn link" id="btn-erase" style="font-size:13.5px">Effacer mes données de cet appareil</button></p>
+  <details class="mentions" id="mentions-legales">
+    <summary>Mentions légales et confidentialité</summary>
+    <h4>Éditeur</h4>
+    <p>La Portée est éditée par la SELARL DSP Avocats, société d’avocats inscrite au Barreau de Nice, au capital de 402 euros, SIREN 978 376 234. Siège : 8 bis rue Andrioli, Le Capitole V, 06000 Nice. Téléphone : 04 93 97 66 66. Courriel : contact@dsp-avocats.fr.</p>
+    <h4>Directeur de la publication</h4>
+    <p>SELARL DSP Avocats, représentée par ses cogérants, Lucas Panicucci et Claire Delmasse Simoni.</p>
+    <h4>Hébergement</h4>
+    <p>Vercel Inc., 440 North Barranca Avenue, Suite 4133, Covina, Californie 91723, États-Unis. vercel.com.</p>
+    <h4>Confidentialité</h4>
+    <p>La Portée fonctionne entièrement dans votre navigateur. Ce que vous saisissez, y compris le texte de la décision, est enregistré uniquement dans le stockage local de votre appareil. Rien n’est transmis au cabinet. Le site n’utilise ni cookie publicitaire ni outil de mesure d’audience. Le bouton « Effacer mes données » supprime tout. Sur un appareil partagé, pensez à l’utiliser.</p>
+    <p>Si vous écrivez au cabinet, les informations que vous transmettez sont traitées par la SELARL DSP Avocats pour répondre à votre demande. Elles sont couvertes par le secret professionnel de l’avocat. Vous pouvez demander à tout moment l’accès à vos données, leur rectification ou leur suppression, à contact@dsp-avocats.fr.</p>
+    <h4>Nature de l’outil</h4>
+    <p>La Portée est un outil pédagogique. La lecture du dispositif repose sur la reconnaissance de formules usuelles et peut se tromper sur une rédaction inhabituelle. Le calcul des délais applique les articles 640 à 643 du Code de procédure civile et les jours fériés légaux ; il ne constitue pas une consultation juridique et ne remplace pas l’analyse personnalisée d’un avocat. L’exemple d’Élise est fictif.</p>
+    <h4>Propriété intellectuelle</h4>
+    <p>Les textes, visuels et outils du site sont la propriété de la SELARL DSP Avocats. Toute reproduction sans autorisation est interdite.</p>
+  </details>
+</footer>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  var LIENS = { sentinelle: "", balance: "", registre: "" };   /* à renseigner au fil des mises en ligne */
+  var KEY = "revela-portee-v1";
+  function L(id) { return "https://www.legifrance.gouv.fr/codes/article_lc/" + id; }
+  /* Références vérifiées sur Légifrance le 9 octobre 2026 */
+  var R = {
+    c480: ["Article 480 du Code de procédure civile", L("LEGIARTI000039725797"), "Le jugement qui tranche une contestation dans son dispositif a, dès son prononcé, l’autorité de la chose jugée sur ce point."],
+    c528: ["Article 528 du Code de procédure civile", L("LEGIARTI000006410842"), "Le délai de recours court à compter de la notification du jugement, même à l’encontre de celui qui notifie."],
+    c5281: ["Article 528-1 du Code de procédure civile", L("LEGIARTI000006410843"), "Si un jugement qui tranche tout le litige n’a pas été notifié dans les deux ans de son prononcé, la partie qui a comparu ne peut plus former de recours à titre principal après ce délai."],
+    c680: ["Article 680 du Code de procédure civile", L("LEGIARTI000028424543"), "L’acte de notification doit indiquer de manière très apparente le délai du recours ouvert et la manière de l’exercer."],
+    c641: ["Articles 640 à 642 du Code de procédure civile", L("LEGIARTI000006411002"), "Le jour de la notification ne compte pas ; un délai en mois expire le jour du même quantième ; un délai qui expire un samedi, un dimanche ou un jour férié est prorogé au premier jour ouvrable suivant."],
+    c643: ["Article 643 du Code de procédure civile", L("LEGIARTI000034747123"), "Les délais d’appel, d’opposition et de pourvoi sont augmentés d’un mois pour les personnes qui demeurent outre-mer et de deux mois pour celles qui demeurent à l’étranger."],
+    c538: ["Article 538 du Code de procédure civile", L("LEGIARTI000006410858"), "Le délai d’appel ou d’opposition est d’un mois en matière contentieuse."],
+    c539: ["Article 539 du Code de procédure civile", L("LEGIARTI000006410859"), "Le délai d’appel ou d’opposition, et le recours exercé dans ce délai, suspendent l’exécution du jugement, sauf exécution provisoire."],
+    c490: ["Article 490 du Code de procédure civile", L("LEGIARTI000006410760"), "L’ordonnance de référé peut être frappée d’appel, sauf si elle est rendue en dernier ressort ; le délai d’appel ou d’opposition est de quinze jours."],
+    c514: ["Article 514 du Code de procédure civile", L("LEGIARTI000039623241"), "Les décisions de première instance sont de droit exécutoires à titre provisoire, sauf si la loi ou la décision en dispose autrement."],
+    c5141: ["Article 514-1 du Code de procédure civile", L("LEGIARTI000039485117"), "Le juge peut écarter l’exécution provisoire par une décision spécialement motivée, sauf lorsqu’il statue en référé."],
+    c5143: ["Article 514-3 du Code de procédure civile", L("LEGIARTI000039485157"), "En cas d’appel, le premier président peut arrêter l’exécution provisoire s’il existe un moyen sérieux d’annulation ou de réformation et un risque de conséquences manifestement excessives."],
+    c571: ["Article 571 du Code de procédure civile", L("LEGIARTI000006410904"), "L’opposition tend à faire rétracter un jugement rendu par défaut ; elle n’est ouverte qu’à la partie défaillante."],
+    c473: ["Article 473 du Code de procédure civile", L("LEGIARTI000006410733"), "Le jugement est rendu par défaut si la décision est en dernier ressort et si le défendeur, qui ne comparaît pas, n’a pas été cité à personne."],
+    c478: ["Article 478 du Code de procédure civile", L("LEGIARTI000006410740"), "Le jugement rendu par défaut, ou réputé contradictoire au seul motif qu’il est susceptible d’appel, est non avenu s’il n’a pas été notifié dans les six mois de sa date."],
+    c612: ["Article 612 du Code de procédure civile", L("LEGIARTI000006410964"), "Le délai de pourvoi en cassation est de deux mois, sauf disposition contraire."],
+    c579: ["Article 579 du Code de procédure civile", L("LEGIARTI000006410916"), "Le pourvoi en cassation et son délai ne suspendent pas l’exécution, sauf exception prévue par la loi."],
+    c973: ["Article 973 du Code de procédure civile", L("LEGIARTI000006411641"), "Devant la Cour de cassation, les parties doivent en principe constituer un avocat au Conseil d’État et à la Cour de cassation."],
+    c899: ["Article 899 du Code de procédure civile", L("LEGIARTI000025820311"), "Devant la cour d’appel, les parties sont tenues, sauf dispositions contraires, de constituer avocat."],
+    c1411: ["Article 1411 du Code de procédure civile", L("LEGIARTI000053497783"), "L’ordonnance portant injonction de payer est signifiée revêtue de la formule exécutoire ; elle est non avenue si elle n’a pas été signifiée dans les trois mois de sa date (ordonnances rendues depuis le 1er septembre 2026)."],
+    c1415: ["Article 1415 du Code de procédure civile", L("LEGIARTI000053497786"), "L’opposition est formée au greffe de la juridiction qui a rendu l’ordonnance, par déclaration contre récépissé ou par lettre recommandée, et mentionne l’adresse du débiteur à peine de nullité."],
+    c1416: ["Article 1416 du Code de procédure civile", L("LEGIARTI000006412571"), "L’opposition est formée dans le mois qui suit la signification ; si elle n’a pas été faite à personne, le délai court du premier acte signifié à personne ou de la première mesure d’exécution rendant les biens indisponibles."],
+    c1422: ["Article 1422 du Code de procédure civile", L("LEGIARTI000053497793"), "Le délai d’opposition et l’opposition sont suspensifs. Sans opposition, l’ordonnance devient un titre exécutoire deux mois après sa signification ; elle n’est pas susceptible d’appel."],
+    r12120: ["Article R. 121-20 du Code des procédures civiles d’exécution", L("LEGIARTI000048869099"), "Le délai d’appel contre une décision du juge de l’exécution est de quinze jours à compter de sa notification."],
+    r12121: ["Article R. 121-21 du Code des procédures civiles d’exécution", L("LEGIARTI000025938340"), "Le délai d’appel et l’appel lui-même n’ont pas d’effet suspensif."],
+    r1211: ["Article R. 121-1 du Code des procédures civiles d’exécution", L("LEGIARTI000051166360"), "Après la signification d’un commandement ou d’un acte de saisie, le juge de l’exécution peut accorder un délai de grâce ; il ne peut pas modifier la décision."],
+    c503: ["Article 503 du Code de procédure civile", L("LEGIARTI000006410778"), "Un jugement ne peut être exécuté contre une partie qu’après lui avoir été notifié, sauf exécution volontaire."],
+    l1114: ["Article L. 111-4 du Code des procédures civiles d’exécution", L("LEGIARTI000025025648"), "L’exécution d’une décision de justice peut être poursuivie pendant dix ans."],
+    l3133: ["Article L. 313-3 du Code monétaire et financier", L("LEGIARTI000006652083"), "Deux mois après que la décision de condamnation est devenue exécutoire, même à titre provisoire, le taux de l’intérêt légal est majoré de cinq points."],
+    l1313: ["Article L. 131-3 du Code des procédures civiles d’exécution", L("LEGIARTI000025025722"), "L’astreinte est liquidée par le juge de l’exécution, sauf si le juge qui l’a ordonnée s’en est réservé le pouvoir."],
+    c700: ["Article 700 du Code de procédure civile", L("LEGIARTI000045268436"), "Le juge condamne la partie qui perd à payer à l’autre une somme qu’il fixe au titre des frais exposés et non compris dans les dépens, notamment les honoraires d’avocat."],
+    c695: ["Article 695 du Code de procédure civile", L("LEGIARTI000047053198"), "Les dépens comprennent notamment les droits de greffe, les émoluments des commissaires de justice, la rémunération des experts et les indemnités des témoins."],
+    c13435: ["Article 1343-5 du Code civil", L("LEGIARTI000032035267"), "Le juge peut reporter ou échelonner le paiement des sommes dues, dans la limite de deux ans."]
+  };
+
+  var TYPE_INFO = {
+    jug: "Le cas le plus courant. L’appel est en principe possible, sauf pour les petites demandes jugées en dernier ressort.",
+    ref: "Le juge des référés statue vite et à titre provisoire : sa décision ne tranche pas définitivement le fond du litige, mais elle s’applique tout de suite.",
+    ip: "L’ordonnance a été rendue sans que vous soyez entendu. Le seul recours est l’opposition, qui ouvre un vrai procès devant le juge.",
+    jex: "Le juge de l’exécution tranche les difficultés liées à une saisie ou à une autre mesure d’exécution.",
+    arr: "La cour d’appel a rejugé l’affaire. Reste, en principe, le seul pourvoi en cassation, qui ne juge que le respect du droit.",
+    nsp: "Cherchez le mot en tête de la première page : « jugement », « ordonnance » ou « arrêt ». En attendant, La Portée raisonne comme pour un jugement, avec prudence."
+  };
+
+  var DEMO = { type: "jug", juridiction: "Tribunal judiciaire de Nice", date: "2026-11-03", moi: "Élise Ferrand", autre: "Marc Martin", sens: "gagne",
+    disp: "PAR CES MOTIFS,\nLe tribunal, statuant publiquement, par jugement contradictoire et en premier ressort,\nPRONONCE la résolution du contrat conclu le 12 juin 2026 entre Élise Ferrand et Marc Martin ;\nCONDAMNE Marc Martin à payer à Élise Ferrand la somme de 4 200 euros au titre de l’acompte versé, avec intérêts au taux légal à compter du 2 octobre 2026 ;\nCONDAMNE Marc Martin à payer à Élise Ferrand la somme de 800 euros à titre de dommages et intérêts ;\nDÉBOUTE Élise Ferrand de sa demande au titre du préjudice moral ;\nCONDAMNE Marc Martin à payer à Élise Ferrand la somme de 1 500 euros sur le fondement de l’article 700 du code de procédure civile ;\nCONDAMNE Marc Martin aux dépens ;\nRAPPELLE que l’exécution provisoire est de droit.",
+    ressort: "premier", qualif: "contra", notif: "sig", ndate: "2026-11-10", perso: "", resid: "metro", demo: true };
+  function BLANK() { return { type: "", juridiction: "", date: "", moi: "", autre: "", sens: "", disp: "", ressort: "", qualif: "", notif: "", ndate: "", perso: "", resid: "metro", demo: false }; }
+
+  var st = { p: BLANK(), screen: "intro" };
+  function load() { try { var r = localStorage.getItem(KEY); if (r) { var d = JSON.parse(r); if (d && typeof d === "object") { st.screen = d.screen || "intro"; st.p = Object.assign(BLANK(), d.p || {}); } } } catch (e) {} }
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(st)); } catch (e) {} }
+  var $ = function (id) { return document.getElementById(id); };
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  var SCREENS = ["intro", "e1", "e2", "e3", "e4", "sheet"];
+  function show(n, keep) { SCREENS.forEach(function (x) { $("s-" + x).classList.toggle("on", x === n); }); if (!keep) { st.screen = n; save(); } window.scrollTo(0, 0); }
+  function go(n) { sync(); if (n === "sheet") renderSheet(); show(n); }
+  function toast(t) { var d = document.createElement("div"); d.className = "toast"; d.setAttribute("role", "status"); d.setAttribute("aria-live", "polite"); d.textContent = t; document.body.appendChild(d); setTimeout(function () { d.remove(); }, 2300); }
+
+  /* ---------- Dates : art. 640 à 643 CPC ---------- */
+  var MS = 86400000;
+  function D(y, m, d) { return new Date(Date.UTC(y, m, d)); }
+  function parse(v) { var p = (v || "").split("-"); if (p.length !== 3) return null; var d = D(+p[0], +p[1] - 1, +p[2]); return isNaN(d) ? null : d; }
+  function iso(d) { return d.toISOString().slice(0, 10); }
+  function addDays(d, n) { return new Date(d.getTime() + n * MS); }
+  function lastDay(y, m) { return new Date(Date.UTC(y, m + 1, 0)).getUTCDate(); }
+  function addMonths(d, n) { var y = d.getUTCFullYear(), m = d.getUTCMonth() + n, day = d.getUTCDate(); y += Math.floor(m / 12); m = ((m % 12) + 12) % 12; return D(y, m, Math.min(day, lastDay(y, m))); }
+  function easter(y) { var a = y % 19, b = Math.floor(y / 100), c = y % 100, d = Math.floor(b / 4), e = b % 4, f = Math.floor((b + 8) / 25), g = Math.floor((b - f + 1) / 3), h = (19 * a + b - d - g + 15) % 30, i = Math.floor(c / 4), k = c % 4, l = (32 + 2 * e + 2 * i - h - k) % 7, m = Math.floor((a + 11 * h + 22 * l) / 451), mo = Math.floor((h + l - 7 * m + 114) / 31), da = ((h + l - 7 * m + 114) % 31) + 1; return D(y, mo - 1, da); }
+  var feriesCache = {};
+  function feries(y) {
+    if (feriesCache[y]) return feriesCache[y];
+    var e = easter(y), map = {};
+    [[D(y,0,1),"1er janvier"],[addDays(e,1),"lundi de Pâques"],[D(y,4,1),"1er mai"],[D(y,4,8),"8 mai"],[addDays(e,39),"Ascension"],[addDays(e,50),"lundi de Pentecôte"],[D(y,6,14),"14 juillet"],[D(y,7,15),"Assomption"],[D(y,10,1),"Toussaint"],[D(y,10,11),"11 novembre"],[D(y,11,25),"Noël"]]
+      .forEach(function (x) { map[iso(x[0])] = x[1]; });
+    return (feriesCache[y] = map);
+  }
+  function nonOuvrable(d) { var w = d.getUTCDay(); if (w === 0) return "un dimanche"; if (w === 6) return "un samedi"; var f = feries(d.getUTCFullYear())[iso(d)]; return f ? "un jour férié (" + f + ")" : ""; }
+  var JOURS = ["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"], MOIS = ["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
+  function fr(d) { return JOURS[d.getUTCDay()] + " " + d.getUTCDate() + (d.getUTCDate() === 1 ? "er" : "") + " " + MOIS[d.getUTCMonth()] + " " + d.getUTCFullYear(); }
+  function frs(d) { return d.getUTCDate() + (d.getUTCDate() === 1 ? "er" : "") + " " + MOIS[d.getUTCMonth()] + " " + d.getUTCFullYear(); }
+  function today() { var n = new Date(); return D(n.getFullYear(), n.getMonth(), n.getDate()); }
+
+  function deadline(startIso, n, unit, resid) {
+    var start = parse(startIso); if (!start) return null;
+    var steps = [], extra = resid === "om" ? 1 : resid === "etr" ? 2 : 0, end;
+    steps.push("Point de départ : la notification, le " + fr(start) + ". Ce jour-là ne compte pas.");
+    if (unit === "j") {
+      var base = extra ? addMonths(start, extra) : start;
+      if (extra) steps.push("Vous demeurez " + (extra === 1 ? "outre-mer" : "à l’étranger") + " : le délai est augmenté de " + extra + " mois.");
+      end = addDays(base, n);
+      steps.push("Délai de " + n + " jours : le dernier jour est le " + fr(end) + ".");
+    } else {
+      end = addMonths(start, n + extra);
+      steps.push("Délai de " + n + " mois" + (extra ? ", augmenté de " + extra + " mois parce que vous demeurez " + (extra === 1 ? "outre-mer" : "à l’étranger") : "") + " : il expire le jour du même quantième" + (end.getUTCDate() === start.getUTCDate() ? "" : " ou, à défaut, le dernier jour du mois") + ", soit le " + fr(end) + ".");
+    }
+    var raw = end, why, first = "";
+    while ((why = nonOuvrable(end))) { if (!first) first = why; end = addDays(end, 1); }
+    if (first) steps.push("Le " + fr(raw) + " est " + first + " : l’échéance est reportée au premier jour ouvrable suivant, le " + fr(end) + ".");
+    steps.push("Le délai expire ce jour-là à 24 heures. N’attendez pas le dernier jour.");
+    return { end: end, steps: steps, left: Math.round((end - today()) / MS) };
+  }
+
+  /* ---------- Lecture du dispositif ---------- */
+  function norm(s) { return String(s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[’`]/g, "'").toLowerCase(); }
+  var VERBS = { condamnons: "condamne", ordonnons: "ordonne", deboutons: "deboute", rejetons: "rejette", disons: "dit", laissons: "laisse", renvoyons: "renvoie", constatons: "constate", declarons: "declare", fixons: "fixe", rappelons: "rappelle", accordons: "accorde", enjoignons: "enjoint", homologuons: "homologue", ecartons: "ecarte", designons: "designe", prononcons: "prononce", condamnant: "condamne" };
+  function nv(s) { return norm(s).replace(/\b([a-z]+ons)\b/g, function (m) { return VERBS[m] || m; }); }
+  function lastTok(name) { var t = norm(name).split(/[\s,]+/).filter(function (x) { return x.length > 2; }); return t.length ? t[t.length - 1] : ""; }
+  function amount(s) {
+    var m = String(s).match(/(\d{1,3}(?:[ .  ]\d{3})+|\d+)(?:,(\d{1,2}))?\s*(?:€|euros?\b|eur\b)/i);
+    if (!m) return null; return parseFloat(m[1].replace(/[ .  ]/g, "") + "." + (m[2] || "0"));
+  }
+  function euro(n) { return n.toLocaleString("fr-FR", { minimumFractionDigits: n % 1 ? 2 : 0, maximumFractionDigits: 2 }) + " €"; }
+  function who(line, verb) {
+    var p = st.p, n = nv(line), i = n.indexOf(verb); if (i < 0) return "";
+    var rest = n.slice(i + verb.length), me = lastTok(p.moi), him = lastTok(p.autre);
+    var cut = rest.search(/ a (payer|verser|rembourser|restituer|reprendre|realiser|achever|terminer|livrer|proceder|faire|laisser|quitter|enlever|retirer|remettre)| aux depens| de (sa|ses|leur|leurs) demande| in solidum| solidairement/);
+    var subj = cut > 0 ? rest.slice(0, cut) : rest.slice(0, 60);
+    var a = me && subj.indexOf(me) >= 0, b = him && subj.indexOf(him) >= 0;
+    if (a && !b) return "moi"; if (b && !a) return "lui"; return "";
+  }
+  function split(t) {
+    return String(t || "").replace(/\r/g, "").split(/\n|;\s*/).map(function (x) {
+      return x.replace(/^\s*par ces motifs\s*[,.:]*/i, "").replace(/^[\s,.\-–—•]+|[\s,]+$/g, "");
+    }).filter(function (x) { return x.length > 2; });
+  }
+  function header(n) { return /^(le tribunal|la cour|nous|le juge|statuant|le president|le conseil)/.test(n) && /(contradictoire|defaut|ressort|publiquement)/.test(n); }
+  function analyse() {
+    var p = st.p, lines = split(p.disp), out = { chefs: [], ep: "", ressort: "", qualif: "", pay: { moi: 0, lui: 0, inc: 0 }, money: false, astreinte: false };
+    lines.forEach(function (l) {
+      var n = nv(l), c = { src: l, tags: [], exp: "" };
+      if (header(n)) {
+        if (/dernier ressort/.test(n)) out.ressort = "dernier"; else if (/premier ressort/.test(n)) out.ressort = "premier";
+        if (/par defaut/.test(n)) out.qualif = "defaut"; else if (/repute(e)? contradictoire/.test(n)) out.qualif = "reput"; else if (/contradictoire/.test(n)) out.qualif = "contra";
+        return;
+      }
+      var amt = amount(l), w;
+      if (/execution provisoire/.test(n)) {
+        var no = /(ecarte|n'y (a|avoir) (pas )?lieu a (l')?execution provisoire|sans execution provisoire|arrete l'execution provisoire)/.test(n) && !/lieu a (l')?ecarter/.test(n);
+        out.ep = no ? "non" : "oui"; c.tags.push(["Exécution provisoire", "ep"]);
+        c.exp = no ? "Le juge a écarté l’exécution provisoire : la décision ne pourra pas être exécutée tant que le délai de recours court, ni pendant le recours." : "La décision s’applique tout de suite, même si elle est contestée devant une juridiction supérieure.";
+      } else if (/article 700|frais irrepetibles|frais exposes et non compris/.test(n)) {
+        w = who(l, "condamne"); c.tags.push(["Frais d’avocat", w === "moi" ? "pay" : w === "lui" ? "get" : ""]);
+        if (/n'y a(voir)? (pas )?lieu|rejette|deboute/.test(n)) { c.tags[0][1] = "no"; c.exp = "Aucune somme n’est allouée pour les frais d’avocat : chacun garde les siens."; }
+        else { c.exp = "Une somme forfaitaire" + (amt ? " de " + euro(amt) : "") + " pour couvrir une partie des frais d’avocat et de procédure" + (w === "moi" ? ", que vous devez payer" : w === "lui" ? ", qui vous revient" : "") + ". Ce n’est pas une indemnisation du préjudice."; if (amt) add(out, w, amt); }
+      } else if (/depens/.test(n)) {
+        w = /a la charge de/.test(n) ? who(l, "a la charge de") : who(l, "condamne"); c.tags.push(["Dépens", w === "moi" ? "pay" : w === "lui" ? "get" : ""]);
+        c.exp = (w === "moi" ? "Vous supportez" : w === "lui" ? "L’autre partie supporte" : "Une partie supporte") + " les frais de procédure tarifés : droits de greffe, actes de commissaire de justice, expertise. Les honoraires d’avocat n’en font pas partie." + (/partage|moitie|chacun/.test(n) ? " Ici, ils sont partagés." : "");
+      } else if (/astreinte/.test(n)) {
+        out.astreinte = true; w = who(l, "condamne") || who(l, "ordonne"); c.tags.push(["Obligation sous astreinte", w === "moi" ? "pay" : w === "lui" ? "get" : ""]);
+        c.exp = (w === "moi" ? "Vous devez" : w === "lui" ? "L’autre partie doit" : "Une partie doit") + " exécuter ce qui est ordonné, sous peine d’une pénalité" + (amt ? " de " + euro(amt) : "") + " par jour de retard, ou par manquement. Cette pénalité n’est réclamée qu’après avoir été « liquidée » par le juge de l’exécution.";
+      } else if (/deboute|rejette|irrecevable/.test(n)) {
+        w = who(l, /deboute/.test(n) ? "deboute" : "declare"); c.tags.push([/irrecevable/.test(n) ? "Demande irrecevable" : "Demande rejetée", w === "moi" ? "no" : "no"]);
+        c.exp = /irrecevable/.test(n) ? "Le juge n’a pas examiné cette demande sur le fond : elle se heurte à un obstacle (délai, qualité pour agir, prescription…)." : (w === "moi" ? "Vous n’obtenez pas ce que vous demandiez sur ce point." : w === "lui" ? "L’autre partie n’obtient pas ce qu’elle demandait sur ce point." : "La demande visée n’est pas accordée.");
+      } else if (/delais de paiement|echelonn|mensualite|reporte le paiement|delai de grace/.test(n)) {
+        c.tags.push(["Délais de paiement", "ep"]); c.exp = "Le juge accorde du temps pour payer (dans la limite de deux ans). Tant que les échéances sont respectées, le créancier ne peut pas saisir.";
+      } else if (/condamne|ordonne|enjoint/.test(n) && (amt !== null || /payer|verser|rembourser|restituer la somme/.test(n))) {
+        w = who(l, "condamne"); out.money = true; var di = /dommages/.test(n), prov = /provision/.test(n);
+        c.tags.push([prov ? "Provision" : di ? "Dommages et intérêts" : "Paiement", w === "moi" ? "pay" : w === "lui" ? "get" : ""]);
+        c.exp = (w === "moi" ? "Vous devez payer" : w === "lui" ? "L’autre partie doit vous payer" : "Une partie doit payer") + (amt ? " " + euro(amt) : " une somme") + (di ? ", en réparation d’un préjudice" : prov ? ", à titre d’avance sur ce qui sera peut-être jugé au fond" : "") + "." + (/interets? au taux legal/.test(n) ? " S’y ajoutent les intérêts au taux légal, à compter de la date indiquée." : "") + (/in solidum|solidairement/.test(n) ? " Plusieurs personnes en sont tenues, chacune pour le tout." : "");
+        if (amt) add(out, w, amt);
+      } else if (/expert|expertise|mesure d'instruction|consultant/.test(n)) {
+        c.tags.push(["Expertise", ""]); c.exp = "Le juge confie à un technicien le soin de l’éclairer. Sur ce point, l’affaire n’est pas finie : elle reprendra après le rapport.";
+      } else if (/resolution|resiliation|nullite|annule|prononce la caducite/.test(n)) {
+        c.tags.push(["Le contrat", ""]); c.exp = /resolution|resiliation/.test(n) ? "Le contrat prend fin à cause de l’inexécution. Selon le cas, chacun doit restituer ce qu’il a reçu." : "L’acte visé est anéanti : il est censé n’avoir jamais existé.";
+      } else if (/homologue/.test(n)) {
+        c.tags.push(["Accord homologué", "get"]); c.exp = "L’accord des parties reçoit la force d’une décision de justice : il peut être exécuté de force s’il n’est pas respecté.";
+      } else if (/condamne|ordonne|enjoint/.test(n)) {
+        w = who(l, /condamne/.test(n) ? "condamne" : "ordonne"); c.tags.push(["Obligation de faire", w === "moi" ? "pay" : w === "lui" ? "get" : ""]);
+        c.exp = (w === "moi" ? "Vous devez" : w === "lui" ? "L’autre partie doit" : "Une partie doit") + " accomplir ce qui est décrit, dans le délai éventuellement fixé.";
+      } else if (/renvoie|sursoit|surseoir|radie|reserve/.test(n)) {
+        c.tags.push(["L’affaire continue", ""]); c.exp = "Le juge ne tranche pas encore ce point : il renvoie, attend un événement ou réserve sa décision.";
+      } else if (/^(dit|juge|constate|declare|fixe|rappelle|donne acte|prend acte)/.test(n) || /dit (que|n'y)|dit et juge/.test(n)) {
+        c.tags.push(["Le juge tranche", ""]); c.exp = "Le juge fixe un point de droit ou de fait. Cela n’oblige pas toujours, à soi seul, à payer ou à faire, mais c’est désormais jugé.";
+      } else {
+        c.tags.push(["À faire expliquer", "no"]); c.exp = "Formule non reconnue : faites-la expliquer par un professionnel.";
+      }
+      out.chefs.push(c);
+    });
+    return out;
+  }
+  function add(out, w, amt) { if (w === "moi") out.pay.moi += amt; else if (w === "lui") out.pay.lui += amt; else out.pay.inc += amt; }
+  function tagsHtml(t) { return t.map(function (x) { return '<span class="tag ' + (x[1] || "") + '">' + esc(x[0]) + "</span>"; }).join(""); }
+  function totalHtml(a) {
+    var p = st.p, me = p.moi || "vous", him = p.autre || "l’autre partie", s = [];
+    if (a.pay.lui) s.push("<strong>" + esc(him) + "</strong> doit vous payer <strong>" + euro(a.pay.lui) + "</strong>");
+    if (a.pay.moi) s.push("vous devez payer <strong>" + euro(a.pay.moi) + "</strong>" + (p.autre ? " à " + esc(him) : ""));
+    if (a.pay.inc) s.push("<strong>" + euro(a.pay.inc) + "</strong> de condamnations dont le débiteur n’a pas été reconnu (renseignez les noms à l’étape 1)");
+    return s.length ? '<div class="total">Au total, ' + s.join(" ; ") + ", hors intérêts et dépens.</div>" : "";
+  }
+  function renderChefs() {
+    var a = analyse(), h = "";
+    if (!a.chefs.length) { $("chefs").innerHTML = ""; return; }
+    h += '<p class="small muted" style="margin:6px 0 8px">' + a.chefs.length + " décision" + (a.chefs.length > 1 ? "s" : "") + " repérée" + (a.chefs.length > 1 ? "s" : "") + ". Vérifiez chaque lecture.</p>";
+    h += a.chefs.map(function (c) { return '<div class="chef">' + tagsHtml(c.tags) + '<p class="src">« ' + esc(c.src) + ' »</p><p class="exp">' + esc(c.exp) + "</p></div>"; }).join("") + totalHtml(a);
+    $("chefs").innerHTML = h;
+  }
+
+  /* ---------- Recours ---------- */
+  function recours() {
+    var p = st.p, a = analyse(), t = p.type || "nsp", res = p.ressort || a.ressort, q = p.qualif || a.qualif, r = { notes: [], law: [] };
+    if (t === "ip") {
+      r.nom = "L’opposition"; r.n = 1; r.u = "m"; r.ou = "Au greffe de la juridiction qui a rendu l’ordonnance, par déclaration contre récépissé ou par lettre recommandée. L’avocat n’est pas obligatoire.";
+      r.law = ["c1416", "c1415", "c1422", "c1411"];
+      r.notes.push("L’opposition ouvre un vrai procès : le juge examinera la demande du créancier et vos arguments. Elle doit mentionner votre adresse, à peine de nullité.");
+      if (p.perso === "non") r.notes.push("L’ordonnance ne vous a pas été remise en main propre : le délai d’un mois peut ne courir qu’à partir du premier acte qui vous sera remis en personne, ou de la première saisie. Par prudence, ne comptez pas sur ce report : agissez dans le mois.");
+      return r;
+    }
+    if (t === "jex") { r.nom = "L’appel"; r.n = 15; r.u = "j"; r.ou = "Devant la cour d’appel, par l’intermédiaire d’un avocat."; r.law = ["r12120", "r12121", "c899"]; r.susp = false; return r; }
+    if (t === "arr") { r.nom = "Le pourvoi en cassation"; r.n = 2; r.u = "m"; r.ou = "Devant la Cour de cassation, par un avocat au Conseil d’État et à la Cour de cassation. La Cour ne rejuge pas les faits : elle vérifie que le droit a été correctement appliqué."; r.law = ["c612", "c973", "c579"]; r.susp = false; return r; }
+    var ref = t === "ref";
+    if (res === "dernier" && q === "defaut") {
+      r.nom = "L’opposition"; r.n = ref ? 15 : 1; r.u = ref ? "j" : "m"; r.ou = "Devant le juge qui a rendu la décision. Elle n’est ouverte qu’à la partie qui n’a pas comparu."; r.law = ref ? ["c490", "c571", "c473"] : ["c538", "c571", "c473"];
+    } else if (res === "dernier") {
+      r.nom = "Le pourvoi en cassation"; r.n = 2; r.u = "m"; r.ou = "Devant la Cour de cassation, par un avocat au Conseil d’État et à la Cour de cassation. L’appel est fermé ; la Cour ne rejuge pas les faits."; r.law = ["c612", "c973", "c579"]; r.susp = false;
+    } else {
+      r.nom = "L’appel"; r.n = ref ? 15 : 1; r.u = ref ? "j" : "m"; r.ou = "Devant la cour d’appel, par l’intermédiaire d’un avocat. La cour rejuge l’affaire en fait et en droit."; r.law = ref ? ["c490", "c899"] : ["c538", "c899"];
+      if (res !== "premier") r.notes.push("Vous n’avez pas trouvé la mention du ressort. Si la décision est « en dernier ressort », l’appel est fermé et seul un pourvoi en cassation, dans les deux mois, reste possible.");
+    }
+    if (q === "defaut" || q === "reput") { r.notes.push("Une décision rendue par défaut, ou réputée contradictoire parce qu’elle est susceptible d’appel, est non avenue si elle n’est pas notifiée dans les six mois de sa date."); r.law.push("c478"); }
+    return r;
+  }
+  function execution(r) {
+    var p = st.p, a = analyse(), t = p.type || "nsp", o = { law: [] }, ipNew = !p.date || p.date >= "2026-09-01";
+    if (t === "ip") {
+      if (!p.date || ipNew) { o.cls = "wait"; o.titre = "Pas encore, sauf absence d’opposition"; o.txt = "Pendant le délai d’opposition, et pendant l’opposition elle-même, l’ordonnance ne peut pas être exécutée. Sans opposition, elle devient un titre exécutoire deux mois après sa signification et produit les effets d’un jugement contradictoire."; o.law = ["c1422"]; }
+      if (p.date && !ipNew) { o.cls = "wait"; o.titre = "Pas encore, sauf absence d’opposition"; o.txt = "Votre ordonnance a été rendue avant le 1er septembre 2026 : elle relève des règles antérieures, selon lesquelles le créancier devait, faute d’opposition, demander au greffe d’y apposer la formule exécutoire. Faites vérifier le calendrier exact par un professionnel."; }
+      return o;
+    }
+    if (t === "jex") { o.cls = "ok"; o.titre = "Oui, dès sa notification"; o.txt = "Le délai d’appel et l’appel lui-même ne suspendent pas une décision du juge de l’exécution."; o.law = ["r12121", "c503"]; return o; }
+    if (t === "arr") { o.cls = "ok"; o.titre = "Oui, dès sa notification"; o.txt = "Le pourvoi en cassation ne suspend pas l’exécution de l’arrêt, sauf exceptions prévues par la loi."; o.law = ["c579", "c503"]; return o; }
+    if (r.nom === "Le pourvoi en cassation") { o.cls = "ok"; o.titre = "Oui, dès sa notification"; o.txt = "La décision est rendue en dernier ressort : aucune voie de recours ordinaire n’est ouverte, et le pourvoi en cassation ne suspend pas l’exécution."; o.law = ["c579", "c503"]; return o; }
+    if (t === "ref") { o.cls = "ok"; o.titre = "Oui, tout de suite"; o.txt = "Une ordonnance de référé est exécutoire à titre provisoire, et le juge des référés ne peut pas écarter cette exécution. Un appel ne la suspend pas."; o.law = ["c514", "c5141", "c503"]; return o; }
+    if (a.ep === "non") { o.cls = "wait"; o.titre = "Non, pas pendant le délai de recours"; o.txt = "Le juge a écarté l’exécution provisoire. La décision ne pourra être exécutée qu’à l’expiration du délai de recours, ou après la décision rendue sur le recours."; o.law = ["c5141", "c539"]; return o; }
+    o.cls = "ok"; o.titre = "Oui, dès sa notification, même en cas " + (r.nom === "L’opposition" ? "d’opposition" : "de recours");
+    o.txt = (a.ep === "oui" ? "Le dispositif le rappelle : l’exécution provisoire est de droit. " : "Sauf mention contraire dans le dispositif, les décisions de première instance sont exécutoires de droit à titre provisoire (pour les affaires engagées depuis le 1er janvier 2020). ") + (r.nom === "L’opposition" ? "Le juge saisi de l’opposition peut toutefois l’arrêter en cas de conséquences manifestement excessives." : "En cas d’appel, le premier président de la cour d’appel peut l’arrêter, mais à des conditions strictes : un moyen sérieux de réformation et un risque de conséquences manifestement excessives.");
+    o.law = ["c514", "c5143", "c503"]; return o;
+  }
+
+  /* ---------- Fiche ---------- */
+  var TYPE_LBL = { jug: "Jugement", ref: "Ordonnance de référé", ip: "Ordonnance d’injonction de payer", jex: "Décision du juge de l’exécution", arr: "Arrêt de cour d’appel", nsp: "Décision" };
+  function renderSheet() {
+    var p = st.p, a = analyse(), r = recours(), ex = execution(r), law = ["c480"], h = "", dt = parse(p.date);
+    h += "<h3>Ma lecture de la décision</h3><p class=\"meta\">" + esc(TYPE_LBL[p.type || "nsp"]) + (p.juridiction ? " · " + esc(p.juridiction) : "") + (dt ? " · " + frs(dt) : "") + (p.moi || p.autre ? " · " + esc(p.moi || "vous") + " et " + esc(p.autre || "l’autre partie") : "") + (p.demo ? " · exemple fictif" : "") + "</p>";
+    /* 1. Ce qu'elle décide */
+    h += "<h4>1. Ce qu’elle décide</h4>";
+    if (a.chefs.length) h += a.chefs.map(function (c) { return '<div class="chef">' + tagsHtml(c.tags) + '<p class="src">« ' + esc(c.src) + ' »</p><p class="exp">' + esc(c.exp) + "</p></div>"; }).join("") + totalHtml(a);
+    else h += '<p class="muted">Vous n’avez pas recopié le dispositif. C’est pourtant la seule partie qui décide : revenez à l’étape 2 pour le lire ligne par ligne.</p>';
+    /* 2. S'applique-t-elle ? */
+    h += "<h4>2. S’applique-t-elle déjà ?</h4><div class=\"status " + ex.cls + "\"><strong>" + esc(ex.titre) + "</strong>" + esc(ex.txt) + "</div>";
+    law = law.concat(ex.law);
+    /* 3. Recours */
+    h += "<h4>3. Peut-on la contester ?</h4><p><strong>" + esc(r.nom) + "</strong>, dans un délai de " + (r.u === "j" ? r.n + " jours" : r.n + " mois") + " à compter de la notification. " + esc(r.ou) + "</p>";
+    law = law.concat(r.law);
+    var dl = null, started = p.notif === "sig" || p.notif === "greffe";
+    if (started && p.ndate) {
+      dl = deadline(p.ndate, r.n, r.u, p.resid);
+      if (dl) {
+        var past = dl.left < 0, future = parse(p.ndate) > today();
+        h += '<div class="deadline' + (past && !p.demo ? " over" : "") + '"><div class="lbl">Date limite indicative · ' + esc(r.nom.replace(/^(L’|Le |La )/, "")) + '</div><div class="d">' + fr(dl.end) + "</div>" +
+          (p.demo || future ? "" : '<div class="left">' + (past ? "Ce délai semble expiré. Consultez un avocat sans attendre : certaines situations permettent encore d’agir." : dl.left === 0 ? "C’est aujourd’hui, jusqu’à minuit." : "Il reste " + dl.left + " jour" + (dl.left > 1 ? "s" : "") + ".") + "</div>") + "</div>";
+        h += '<ol class="steps">' + dl.steps.map(function (s) { return "<li>" + esc(s) + "</li>"; }).join("") + "</ol>";
+        law.push("c528", "c641"); if (p.resid !== "metro") law.push("c643");
+      }
+    } else if (started) {
+      h += '<p class="muted">Indiquez la date de la notification à l’étape 4 pour calculer la date limite.</p>'; law.push("c528");
+    } else {
+      h += '<div class="status wait"><strong>Le délai ne court pas encore</strong>Une simple copie ne fait pas courir le délai de recours : il commencera le jour où la décision vous sera officiellement notifiée. Ce jour-là, notez la date et revenez calculer l’échéance.' + (p.type === "ip" ? "" : " Attention : la partie qui a comparu ne peut plus faire de recours deux ans après la décision, même sans notification.") + '</div>';
+      law.push("c528"); if (p.type !== "ip") law.push("c5281");
+      if (p.type === "ip") h += '<p class="small muted">Pour une injonction de payer, l’ordonnance est non avenue si elle n’est pas signifiée dans les trois mois de sa date (ordonnances rendues depuis le 1er septembre 2026).</p>';
+    }
+    if (r.notes.length) h += "<ul>" + r.notes.map(function (n) { return "<li>" + esc(n) + "</li>"; }).join("") + "</ul>";
+    h += '<p class="small muted">L’acte de notification doit indiquer, de manière très apparente, le délai et la manière d’exercer le recours : relisez-le, et fiez-vous à lui en cas de doute.</p>'; law.push("c680");
+    /* 4. Et maintenant */
+    var todo = [], sens = p.sens;
+    if (sens === "gagne" || sens === "mixte") {
+      todo.push("Proposez d’abord une exécution volontaire : écrivez à l’autre partie, ou à son avocat, en joignant la décision et en fixant un délai raisonnable.");
+      if (!started) todo.push("À défaut, faites signifier la décision par un commissaire de justice : c’est la condition pour l’exécuter de force, et c’est ce qui fait courir le délai de recours de l’autre partie.");
+      todo.push("Vous disposez de dix ans pour faire exécuter la décision.");
+      if (a.money) todo.push("Deux mois après que la décision est devenue exécutoire, les intérêts au taux légal sont majorés de cinq points : c’est un argument pour obtenir un paiement rapide.");
+      law.push("c503", "l1114"); if (a.money) law.push("l3133");
+    }
+    if (sens === "perd" || sens === "mixte") {
+      if (dl && !p.demo) todo.push("Notez la date limite dans votre agenda, avec un rappel une semaine avant.");
+      todo.push("Décidez sans tarder si vous contestez : un avocat vous dira si le recours a des chances raisonnables, et ce qu’il coûtera. Un recours abusif peut être sanctionné par une amende.");
+      if (ex.cls === "ok") todo.push("Contester ne vous dispense pas, en principe, d’exécuter : ne pas payer expose à des saisies.");
+      if (a.money) { todo.push("Si vous ne pouvez pas payer en une fois, proposez un échéancier par écrit. À défaut d’accord, le juge de l’exécution peut accorder un délai de grâce une fois le commandement ou la saisie signifié."); law.push("r1211", "c13435", "l3133"); }
+    }
+    if (a.astreinte) { todo.push("L’astreinte court à compter de la date fixée par la décision : gardez la preuve de chaque exécution, ou de chaque manquement."); law.push("l1313"); }
+    if (a.chefs.some(function (c) { return c.tags[0][0] === "Frais d’avocat"; })) law.push("c700");
+    if (a.chefs.some(function (c) { return c.tags[0][0] === "Dépens"; })) law.push("c695");
+    if (!sens) todo.push("Indiquez à l’étape 1 si la décision vous est plutôt favorable ou défavorable, pour voir les démarches qui vous concernent.");
+    h += "<h4>4. Et maintenant</h4><ol>" + todo.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ol>";
+    $("sheet").innerHTML = h;
+    /* textes */
+    var seen = {}; law = law.filter(function (k) { if (seen[k] || !R[k]) return false; seen[k] = 1; return true; });
+    $("law").innerHTML = law.map(function (k) { var l = R[k]; return '<div class="law"><p>' + esc(l[2]) + '</p><a href="' + l[1] + '" target="_blank" rel="noopener">' + esc(l[0]) + ", sur Légifrance</a></div>"; }).join("") + '<p class="small muted" style="margin:10px 0 0">Références vérifiées sur Légifrance le 9 octobre 2026.</p>';
+    var links = [];
+    if (LIENS.sentinelle) links.push('<a href="' + LIENS.sentinelle + '">La Sentinelle</a> pour suivre cette échéance avec vos autres délais');
+    if (LIENS.balance) links.push('<a href="' + LIENS.balance + '">La Balance</a> pour peser une proposition d’accord plutôt qu’un recours');
+    $("links").innerHTML = links.length ? "Pour aller plus loin : " + links.join(" · ") + "." : ""; $("links").hidden = !links.length;
+  }
+
+  /* ---------- Saisie ---------- */
+  function sync() {
+    var p = st.p;
+    document.querySelectorAll("[data-f]").forEach(function (el) { if (document.activeElement !== el) el.value = p[el.getAttribute("data-f")] || ""; });
+    document.querySelectorAll(".chips[data-k]").forEach(function (g) { var k = g.getAttribute("data-k"); g.querySelectorAll(".chip").forEach(function (b) { b.setAttribute("aria-pressed", String(p[k] === b.getAttribute("data-v"))); }); });
+    $("type-info").textContent = TYPE_INFO[p.type] || "";
+    var noM = p.type === "ip" || p.type === "jex" || p.type === "arr";
+    $("m-box").hidden = noM; $("m-none").hidden = !noM;
+    $("m-none-txt").textContent = p.type === "ip" ? "Pour une injonction de payer, il n’y a pas de mention à vérifier : la seule voie de recours est l’opposition." : p.type === "jex" ? "Pour une décision du juge de l’exécution, il n’y a pas de mention à vérifier : la voie de recours est l’appel, dans les quinze jours." : "Pour un arrêt de cour d’appel, la voie de recours ordinaire est épuisée : reste le pourvoi en cassation.";
+    var a = analyse(), f = [];
+    if (a.ressort) f.push("« en " + a.ressort + " ressort »"); if (a.qualif) f.push("« " + { contra: "contradictoire", reput: "réputé contradictoire", defaut: "par défaut" }[a.qualif] + " »");
+    $("m-found").hidden = !f.length; $("m-found").textContent = f.length ? "Repéré dans votre dispositif : " + f.join(" et ") + ". Vérifiez la sélection ci-dessous." : "";
+    $("w-perso").hidden = p.type !== "ip";
+    $("w-ndate").hidden = !(p.notif === "sig" || p.notif === "greffe");
+    renderChefs();
+  }
+  document.querySelectorAll("[data-f]").forEach(function (el) {
+    el.addEventListener("input", function () {
+      st.p[el.getAttribute("data-f")] = el.value; st.p.demo = false; save();
+      if (el.getAttribute("data-f") === "disp") { renderChefs(); autoMentions(); }
+    });
+  });
+  function autoMentions() { var a = analyse(); if (a.ressort && !st.p.ressort) st.p.ressort = a.ressort; if (a.qualif && !st.p.qualif) st.p.qualif = a.qualif; save(); }
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest(".chips[data-k] .chip"); if (!b) return; e.preventDefault();
+    var k = b.parentNode.getAttribute("data-k"); st.p[k] = st.p[k] === b.getAttribute("data-v") && k !== "resid" ? "" : b.getAttribute("data-v"); st.p.demo = false; save(); sync();
+  });
+
+  document.querySelectorAll("[data-go]").forEach(function (b) { b.onclick = function () { if (b.getAttribute("data-go") === "e3") autoMentions(); go(b.getAttribute("data-go")); }; });
+  $("btn-sheet").onclick = function () { var p = st.p; if ((p.notif === "sig" || p.notif === "greffe") && p.ndate && parse(p.ndate) > today() && !p.demo) toast("La date de notification est dans le futur : vérifiez-la."); go("sheet"); };
+  $("btn-print").onclick = function () { window.print(); };
+  $("btn-start").onclick = function () { if (st.p.demo) st.p = BLANK(); go("e1"); };
+  $("btn-demo").onclick = function () { st.p = JSON.parse(JSON.stringify(DEMO)); save(); go("sheet"); };
+  $("btn-last").onclick = function () { go("sheet"); };
+  $("btn-erase").onclick = function () { if (!this.dataset.armed) { var self = this; self.dataset.armed = "1"; self.dataset.label = self.textContent; self.textContent = "Cliquez à nouveau pour tout effacer"; setTimeout(function () { if (self.dataset.armed) { delete self.dataset.armed; self.textContent = self.dataset.label; } }, 5000); return; } delete this.dataset.armed; setTimeout(function () { try { localStorage.removeItem(KEY); } catch (e) {} }, 0);
+     try { localStorage.removeItem(KEY); } catch (e) {} st = { p: BLANK(), screen: "intro" }; sync(); $("btn-last").hidden = true; show("intro"); this.textContent = "Données effacées"; };
+  function openMentions() { if (location.hash === "#mentions-legales") $("mentions-legales").open = true; }
+  window.addEventListener("hashchange", openMentions);
+  window.__portee = { analyse: analyse, deadline: deadline, recours: recours };
+
+  load(); sync(); openMentions();
+  $("btn-last").hidden = !(st.p.type || st.p.disp) || st.p.demo;
+  if (SCREENS.indexOf(st.screen) > 0) go(st.screen); else show("intro", true);
+})();
+</script>
+</body>
+</html>
